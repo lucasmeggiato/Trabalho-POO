@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Heranca - POO</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>POO - Programacao Orientada a Objetos</h1>
+    <div class="hamburguer" id="hamburguer">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="encapsulamento.html">Encapsulamento</a></li>
+      <li><a href="heranca.html" class="active">Heranca</a></li>
+      <li><a href="polimorfismo.html">Polimorfismo</a></li>
+      <li><a href="abstracao.html">Abstracao</a></li>
+    </ul>
+  </nav>
+
+  <div class="conteudo">
+
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> &rsaquo; Heranca
+    </div>
+
+    <h1 class="titulo-pagina">Heranca</h1>
+
+    <h2>O que e Heranca?</h2>
+    <p>Heranca e um mecanismo que permite que uma classe (chamada subclasse ou classe filha) herde atributos e metodos de outra classe (chamada superclasse ou classe pai). Isso promove a reutilizacao de codigo e cria uma hierarquia natural entre as classes.</p>
+    <img src="imagens/Heranca.png" alt="Diagrama de Heranca" style="max-width: 600px;" />
+
+    <hr>
+
+    <h2>Heranca Simples (Single Inheritance)</h2>
+    <p>E o tipo mais comum de heranca. Uma subclasse herda de apenas uma superclasse, criando uma linha direta de relacionamento entre as duas classes.</p>
+<pre>
+class Animal {
+    String nome;
+    void comer() { System.out.println("Comendo..."); }
+}
+
+class Cachorro extends Animal {
+    void latir() { System.out.println("Au au!"); }
+}
+</pre>
+
+    <hr>
+
+    <h2>Heranca Multipla (Multiple Inheritance)</h2>
+    <p>Ocorre quando uma subclasse herda de duas ou mais superclasses. Em C++ isso e permitido diretamente. Em Java, e simulada com o uso de interfaces. O modificador Protected e frequentemente utilizado neste contexto.</p>
+
+    <hr>
+
+    <h2>Heranca Multinivel (Multilevel Inheritance)</h2>
+    <p>E quando uma cadeia de heranca tem mais de dois niveis. A classe B herda de A, e a classe C herda de B, formando uma hierarquia em cascata.</p>
+<pre>
+class Veiculo { }
+class Carro extends Veiculo { }
+class CarroEsportivo extends Carro { }
+</pre>
+
+    <hr>
+
+    <h2>Heranca Hierarquica (Hierarchical Inheritance)</h2>
+    <p>Ocorre quando varias subclasses herdam de uma mesma superclasse. A classe pai e compartilhada por multiplos filhos, cada um com suas proprias especializacoes.</p>
+    <ul>
+      <li>Uma classe Forma pode ser pai de Circulo, Quadrado e Triangulo.</li>
+      <li>Todas as formas compartilham atributos como cor e area, mas cada uma calcula de forma diferente.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Por que usar Heranca?</h2>
+    <ul>
+      <li>Evita repeticao de codigo.</li>
+      <li>Facilita a manutencao: uma mudanca na superclasse reflete nas subclasses.</li>
+      <li>Permite criar hierarquias logicas e intuitivas no sistema.</li>
+      <li>Base para o funcionamento do Polimorfismo.</li>
+    </ul>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Abstracao - POO</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>POO - Programacao Orientada a Objetos</h1>
+    <div class="hamburguer" id="hamburguer">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="encapsulamento.html">Encapsulamento</a></li>
+      <li><a href="heranca.html">Heranca</a></li>
+      <li><a href="polimorfismo.html">Polimorfismo</a></li>
+      <li><a href="abstracao.html" class="active">Abstracao</a></li>
+    </ul>
+  </nav>
+
+  <div class="conteudo">
+
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> &rsaquo; Abstracao
+    </div>
+
+    <h1 class="titulo-pagina">Abstracao</h1>
+
+    <h2>O que e Abstracao?</h2>
+    <p>Abstracao e o processo de identificar as caracteristicas essenciais de um objeto e ignorar os detalhes irrelevantes para o contexto. E pensar em "o que um objeto faz" sem se preocupar com "como ele faz".</p>
+    <p>Exemplo classico: ao dirigir um carro, voce usa o volante, o acelerador e o freio. Voce nao precisa saber como o motor funciona internamente — essa complexidade esta abstraida.</p>
+    <img src="imagens/abstracao.png" alt="Diagrama de Abstracao" style="max-width: 500px;" />
+
+    <hr>
+
+    <h2>Classes Abstratas (Abstract Classes)</h2>
+    <p>Uma classe abstrata e uma classe que nao pode ser instanciada diretamente. Ela serve como modelo base para outras classes. Pode conter metodos concretos (com implementacao) e metodos abstratos (sem implementacao).</p>
+<pre>
+abstract class Forma {
+    abstract double calcularArea();
+
+    void exibir() {
+        System.out.println("Sou uma forma geometrica");
+    }
+}
+
+class Circulo extends Forma {
+    double raio;
+
+    double calcularArea() {
+        return Math.PI * raio * raio;
+    }
+}
+</pre>
+
+    <hr>
+
+    <h2>Interfaces</h2>
+    <p>Uma interface e um contrato que define quais metodos uma classe deve implementar, sem dizer como. Toda classe que assina uma interface garante que vai fornecer aqueles comportamentos.</p>
+<pre>
+interface Voador {
+    void voar();
+}
+
+class Passaro implements Voador {
+    public void voar() {
+        System.out.println("O passaro bate asas e voa!");
+    }
+}
+
+class Aviao implements Voador {
+    public void voar() {
+        System.out.println("O aviao usa motores e voa!");
+    }
+}
+</pre>
+
+    <hr>
+
+    <h2>Ocultacao de Complexidade (Hide Complexity)</h2>
+    <p>Um dos principais objetivos da abstracao e ocultar a complexidade do sistema do usuario final. Ao usar uma classe ou chamar um metodo, o desenvolvedor nao precisa entender toda a logica interna.</p>
+    <ul>
+      <li>Ao chamar list.sort(), voce nao precisa saber qual algoritmo e usado.</li>
+      <li>Ao usar uma API bancaria, voce nao ve como a transacao e processada internamente.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Beneficios da Abstracao</h2>
+    <ul>
+      <li>Reduz a complexidade do codigo para quem o utiliza.</li>
+      <li>Permite que equipes diferentes trabalhem em partes independentes do sistema.</li>
+      <li>Facilita a substituicao de implementacoes sem impactar outros modulos.</li>
+      <li>Torna o codigo mais legivel e organizado.</li>
+    </ul>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

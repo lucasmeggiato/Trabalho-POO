@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Encapsulamento - POO</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>POO - Programacao Orientada a Objetos</h1>
+    <div class="hamburguer" id="hamburguer">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="encapsulamento.html" class="active">Encapsulamento</a></li>
+      <li><a href="heranca.html">Heranca</a></li>
+      <li><a href="polimorfismo.html">Polimorfismo</a></li>
+      <li><a href="abstracao.html">Abstracao</a></li>
+    </ul>
+  </nav>
+
+  <div class="conteudo">
+
+    <div class="breadcrumb">
+      <a href="index.html">Inicio</a> &rsaquo; Encapsulamento
+    </div>
+
+    <h1 class="titulo-pagina">Encapsulamento</h1>
+
+    <h2>O que e Encapsulamento?</h2>
+    <p>Encapsulamento e o principio de esconder os detalhes internos de uma classe e expor somente o que for necessario para o mundo externo. E como uma capsula que protege o que esta dentro.</p>
+    <p>Na pratica, os atributos de uma classe sao declarados como private e o acesso a eles e feito por meio de metodos publicos chamados getters e setters.</p>
+    <img src="imagens/Encapsulamento.png" alt="Diagrama de Encapsulamento" style="max-width: 450px;" />
+
+    <hr>
+
+    <h2>Data Hiding - Ocultacao de Dados</h2>
+    <p>Data Hiding e a tecnica de impedir que partes externas do programa acessem ou modifiquem os dados internos de um objeto diretamente. Isso evita que um dado seja corrompido acidentalmente e garante que a logica de validacao esteja centralizada dentro da propria classe.</p>
+
+    <hr>
+
+    <h2>Modificadores de Acesso</h2>
+    <p>Os modificadores de acesso controlam o nivel de visibilidade dos atributos e metodos de uma classe. Os principais sao:</p>
+    <ul>
+      <li><strong>Public:</strong> O membro pode ser acessado por qualquer outra classe, em qualquer pacote.</li>
+      <li><strong>Private:</strong> O membro so pode ser acessado dentro da propria classe onde foi declarado.</li>
+      <li><strong>Protected:</strong> O membro pode ser acessado dentro da propria classe e tambem por classes que a herdam.</li>
+    </ul>
+
+    <hr>
+
+    <h2>Exemplo de Codigo</h2>
+<pre>
+class ContaBancaria {
+    private double saldo;
+
+    public double getSaldo() {
+        return saldo;
+    }
+
+    public void depositar(double valor) {
+        if (valor > 0) saldo += valor;
+    }
+}
+</pre>
+
+    <hr>
+
+    <h2>Beneficios do Encapsulamento</h2>
+    <ul>
+      <li>Protege os dados de acessos indevidos.</li>
+      <li>Permite alterar a implementacao interna sem afetar quem usa a classe.</li>
+      <li>Facilita a manutencao e os testes do codigo.</li>
+      <li>Aumenta a seguranca e confiabilidade do sistema.</li>
+    </ul>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

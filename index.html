@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>POO - Programacao Orientada a Objetos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <header>
+    <h1>POO - Programacao Orientada a Objetos</h1>
+    <div class="hamburguer" id="hamburguer">
+      <span></span><span></span><span></span>
+    </div>
+  </header>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html" class="active">Inicio</a></li>
+      <li><a href="encapsulamento.html">Encapsulamento</a></li>
+      <li><a href="heranca.html">Heranca</a></li>
+      <li><a href="polimorfismo.html">Polimorfismo</a></li>
+      <li><a href="abstracao.html">Abstracao</a></li>
+    </ul>
+  </nav>
+
+  <div class="hero">
+    <h1>Programacao Orientada a Objetos</h1>
+    <p>Um paradigma de programacao que organiza o software em objetos — unidades que combinam dados e comportamentos, tornando o codigo mais modular, reutilizavel e facil de manter.</p>
+    <img src="imagens/POO-INICIO.png" alt="Diagrama POO" />
+  </div>
+
+  <div class="conteudo">
+
+    <h2>Os 4 Pilares da POO</h2>
+    <p>Selecione um topico para aprender mais sobre cada pilar.</p>
+
+    <div class="cards">
+      <a class="card" href="encapsulamento.html">
+        <h3>Encapsulamento</h3>
+        <p>Protege os dados internos de um objeto, expondo apenas o necessario.</p>
+      </a>
+      <a class="card" href="heranca.html">
+        <h3>Heranca</h3>
+        <p>Permite que uma classe herde atributos e metodos de outra classe.</p>
+      </a>
+      <a class="card" href="polimorfismo.html">
+        <h3>Polimorfismo</h3>
+        <p>Objetos diferentes respondem a mesma mensagem de formas distintas.</p>
+      </a>
+      <a class="card" href="abstracao.html">
+        <h3>Abstracao</h3>
+        <p>Oculta complexidade e expoe somente o que e essencial ao usuario.</p>
+      </a>
+    </div>
+
+    <hr>
+
+    <h2>O que e um Objeto?</h2>
+    <p>Em POO, um objeto e uma instancia de uma classe. A classe funciona como um molde — ela define quais atributos (dados) e metodos (comportamentos) os objetos criados a partir dela terao.</p>
+    <p>Por exemplo: a classe Carro define que todo carro tem cor, marca e velocidade. Um objeto seria um carro especifico: um Fusca vermelho de 1972.</p>
+    <img src="imagens/Objeto.png" alt="Diagrama de Objeto" style="max-width: 400px;" />
+
+    <hr>
+
+    <h2>Exemplo de Codigo</h2>
+<pre>
+class Carro {
+    String cor;
+    String marca;
+    int velocidade;
+
+    void acelerar() {
+        velocidade += 10;
+    }
+}
+</pre>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
