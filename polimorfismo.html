@@ -1,50 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Polimorfismo - POO</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
 
   <header>
-    <h1>POO - Programacao Orientada a Objetos</h1>
-    <div class="hamburguer" id="hamburguer">
+    <h1>POO - Programação Orientada a Objetos</h1>
+    <div class="hamburger" id="hamburger">
       <span></span><span></span><span></span>
     </div>
   </header>
 
   <nav id="nav-menu">
     <ul>
-      <li><a href="index.html">Inicio</a></li>
+      <li><a href="index.html">Início</a></li>
       <li><a href="encapsulamento.html">Encapsulamento</a></li>
-      <li><a href="heranca.html">Heranca</a></li>
+      <li><a href="heranca.html">Herança</a></li>
       <li><a href="polimorfismo.html" class="active">Polimorfismo</a></li>
-      <li><a href="abstracao.html">Abstracao</a></li>
+      <li><a href="abstracao.html">Abstração</a></li>
     </ul>
   </nav>
 
   <div class="conteudo">
 
     <div class="breadcrumb">
-      <a href="index.html">Inicio</a> &rsaquo; Polimorfismo
+      <a href="index.html">Início</a> &rsaquo; Polimorfismo
     </div>
 
     <h1 class="titulo-pagina">Polimorfismo</h1>
 
-    <h2>O que e Polimorfismo?</h2>
-    <p>A palavra polimorfismo vem do grego e significa "muitas formas". Em POO, e a capacidade de um objeto ser referenciado de multiplas formas, ou de um mesmo metodo se comportar de maneiras diferentes dependendo do objeto que o chama.</p>
-    <p>Exemplo: o metodo emitirSom() — um Cachorro late, um Gato mia, um Passaro canta. O mesmo metodo, comportamentos distintos.</p>
+    <h2>O que é Polimorfismo?</h2>
+    <p>A palavra polimorfismo vem do grego e significa "muitas formas". Em POO, é a capacidade de um objeto ser referenciado de múltiplas formas, ou de um mesmo método se comportar de maneiras diferentes dependendo do objeto que o chama.</p>
+    <p>Exemplo: o método emitirSom() — um Cachorro late, um Gato mia, um Pássaro canta. O mesmo método, comportamentos distintos.</p>
     <img src="imagens/Polimorfismo.png" alt="Diagrama de Polimorfismo" style="max-width: 400px;" />
 
     <hr>
 
-    <h2>Polimorfismo em Tempo de Compilacao (Compile-time)</h2>
-    <p>Tambem chamado de polimorfismo estatico, e resolvido pelo compilador antes da execucao do programa. E implementado por meio do Method Overloading e do Operator Overloading.</p>
+    <h2>Polimorfismo em Tempo de Compilação (Compile-time)</h2>
+    <p>Também chamado de polimorfismo estático, é resolvido pelo compilador antes da execução do programa. É implementado por meio do Method Overloading e do Operator Overloading.</p>
 
-    <h2>Method Overloading - Sobrecarga de Metodo</h2>
-    <p>Ocorre quando uma classe possui varios metodos com o mesmo nome, mas com parametros diferentes. O compilador decide qual versao chamar baseado nos argumentos fornecidos.</p>
+    <h2>Method Overloading - Sobrecarga de Método</h2>
+    <p>Ocorre quando uma classe possui vários métodos com o mesmo nome, mas com parâmetros diferentes. O compilador decide qual versão chamar baseado nos argumentos fornecidos.</p>
 <pre>
 class Calculadora {
     int somar(int a, int b) { return a + b; }
@@ -54,15 +54,15 @@ class Calculadora {
 </pre>
 
     <h2>Operator Overloading - Sobrecarga de Operador</h2>
-    <p>Permite que operadores como +, -, * tenham comportamentos diferentes dependendo dos operandos. Muito usado em C++ e Python. Em Java, nao e suportado diretamente.</p>
+    <p>Permite que operadores como +, -, * tenham comportamentos diferentes dependendo dos operandos. Muito usado em C++ e Python. Em Java, não é suportado diretamente.</p>
 
     <hr>
 
-    <h2>Polimorfismo em Tempo de Execucao (Runtime)</h2>
-    <p>Tambem chamado de polimorfismo dinamico, e resolvido em tempo de execucao. E implementado via Method Overriding.</p>
+    <h2>Polimorfismo em Tempo de Execução (Runtime)</h2>
+    <p>Também chamado de polimorfismo dinâmico, é resolvido em tempo de execução. É implementado via Method Overriding.</p>
 
-    <h2>Method Overriding - Sobrescrita de Metodo</h2>
-    <p>Ocorre quando uma subclasse redefine um metodo que ja existe na superclasse, com o mesmo nome, tipo de retorno e parametros.</p>
+    <h2>Method Overriding - Sobrescrita de Método</h2>
+    <p>Ocorre quando uma subclasse redefine um método que já existe na superclasse, com o mesmo nome, tipo de retorno e parâmetros.</p>
 <pre>
 class Animal {
     void emitirSom() { System.out.println("Som generico"); }
@@ -76,10 +76,10 @@ class Cachorro extends Animal {
 
     <hr>
 
-    <h2>Beneficios do Polimorfismo</h2>
+    <h2>Benefícios do Polimorfismo</h2>
     <ul>
-      <li>Permite escrever codigo mais generico e flexivel.</li>
-      <li>Facilita a extensao do sistema sem alterar o codigo existente.</li>
+      <li>Permite escrever código mais genérico e flexível.</li>
+      <li>Facilita a extensão do sistema sem alterar o código existente.</li>
       <li>Reduz o uso excessivo de estruturas condicionais.</li>
     </ul>
 
